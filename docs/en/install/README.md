@@ -501,6 +501,10 @@ RSSHub supports access control via access key/code, whitelisting and blacklistin
 
 White/blacklisting support IP, route and UA as values, fuzzy matching. Use `,` as the delimiter to separate multiple values, eg: `WHITELIST=1.1.1.1,2.2.2.2,/qdaily/column/59`
 
+#### URL Path Prefix
+
+`PATHPREFIX`: The prefix of URL path, default is an empty string. eg: `/pathprefix`, then the URL become <https://rsshub.app/pathprefix/qdaily/column/59>
+
 #### Access Key/Code
 
 -   `ACCESS_KEY`: the access key. When set, access via the key directly or the access code described above
