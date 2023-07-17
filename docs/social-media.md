@@ -70,11 +70,27 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ### UP 主粉丝
 
-<Route author="Qixingchen" example="/bilibili/user/followers/2267573" path="/bilibili/user/followers/:uid" :paramsDesc="['用户 id, 可在 UP 主主页中找到']" radar="1" rssbud="1"/>
+<Route author="Qixingchen" example="/bilibili/user/followers/2267573/3" path="/bilibili/user/followers/:uid/:loginUid" :paramsDesc="['用户 id, 可在 UP 主主页中找到','用于登入的用户id,需要配置对应的 Cookie 值']" radar="1" rssbud="1" selfhost="1">
+
+::: warning 注意
+
+UP 主粉丝现在需要 b 站登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。
+
+:::
+
+</Route>
 
 ### UP 主关注用户
 
-<Route author="Qixingchen" example="/bilibili/user/followings/2267573" path="/bilibili/user/followings/:uid" :paramsDesc="['用户 id, 可在 UP 主主页中找到']" radar="1" rssbud="1"/>
+<Route author="Qixingchen" example="/bilibili/user/followings/2267573/3" path="/bilibili/user/followings/:uid/:loginUid" :paramsDesc="['用户 id, 可在 UP 主主页中找到','用于登入的用户id,需要配置对应的 Cookie 值']" radar="1" rssbud="1" selfhost="1">
+
+::: warning 注意
+
+UP 主关注用户现在需要 b 站登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。
+
+:::
+
+</Route>
 
 ### 分区视频
 
@@ -83,116 +99,116 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 动画
 
 | MAD·AMV | MMD·3D | 短片・手书・配音 | 特摄 | 综合 |
-| ------- | ------ | -------- | -- | -- |
-| 24      | 25     | 47       | 86 | 27 |
+| ------- | ------ | ---------------- | ---- | ---- |
+| 24      | 25     | 47               | 86   | 27   |
 
 番剧
 
 | 连载动画 | 完结动画 | 资讯 | 官方延伸 |
-| ---- | ---- | -- | ---- |
-| 33   | 32   | 51 | 152  |
+| -------- | -------- | ---- | -------- |
+| 33       | 32       | 51   | 152      |
 
 国创
 
-| 国产动画 | 国产原创相关 | 布袋戏 | 动态漫・广播剧 | 资讯  |
-| ---- | ------ | --- | ------- | --- |
-| 153  | 168    | 169 | 195     | 170 |
+| 国产动画 | 国产原创相关 | 布袋戏 | 动态漫・广播剧 | 资讯 |
+| -------- | ------------ | ------ | -------------- | ---- |
+| 153      | 168          | 169    | 195            | 170  |
 
 音乐
 
-| 原创音乐 | 翻唱 | VOCALOID·UTAU | 电音  | 演奏 | MV  | 音乐现场 | 音乐综合 | ~~OP/ED/OST~~ |
-| ---- | -- | ------------- | --- | -- | --- | ---- | ---- | ------------- |
-| 28   | 31 | 30            | 194 | 59 | 193 | 29   | 130  | 54            |
+| 原创音乐 | 翻唱 | VOCALOID·UTAU | 电音 | 演奏 | MV  | 音乐现场 | 音乐综合 | ~~OP/ED/OST~~ |
+| -------- | ---- | ------------- | ---- | ---- | --- | -------- | -------- | ------------- |
+| 28       | 31   | 30            | 194  | 59   | 193 | 29       | 130      | 54            |
 
 舞蹈
 
-| 宅舞 | 街舞  | 明星舞蹈 | 中国舞 | 舞蹈综合 | 舞蹈教程 |
-| -- | --- | ---- | --- | ---- | ---- |
-| 20 | 198 | 199  | 200 | 154  | 156  |
+| 宅舞 | 街舞 | 明星舞蹈 | 中国舞 | 舞蹈综合 | 舞蹈教程 |
+| ---- | ---- | -------- | ------ | -------- | -------- |
+| 20   | 198  | 199      | 200    | 154      | 156      |
 
 游戏
 
-| 单机游戏 | 电子竞技 | 手机游戏 | 网络游戏 | 桌游棋牌 | GMV | 音游  | Mugen |
-| ---- | ---- | ---- | ---- | ---- | --- | --- | ----- |
-| 17   | 171  | 172  | 65   | 173  | 121 | 136 | 19    |
+| 单机游戏 | 电子竞技 | 手机游戏 | 网络游戏 | 桌游棋牌 | GMV | 音游 | Mugen |
+| -------- | -------- | -------- | -------- | -------- | --- | ---- | ----- |
+| 17       | 171      | 172      | 65       | 173      | 121 | 136  | 19    |
 
 知识
 
-| 科学科普 | 社科人文 | 财经  | 校园学习 | 职业职场 | 野生技术协会 |
-| ---- | ---- | --- | ---- | ---- | ------ |
-| 201  | 124  | 207 | 208  | 209  | 122    |
+| 科学科普 | 社科人文 | 财经 | 校园学习 | 职业职场 | 野生技术协会 |
+| -------- | -------- | ---- | -------- | -------- | ------------ |
+| 201      | 124      | 207  | 208      | 209      | 122          |
 
 ~~科技~~
 
 | ~~演讲・公开课~~ | ~~星海~~ | ~~机械~~ | ~~汽车~~ |
-| ---------- | ------ | ------ | ------ |
-| 39         | 96     | 98     | 176    |
+| ---------------- | -------- | -------- | -------- |
+| 39               | 96       | 98       | 176      |
 
 数码
 
 | 手机平板 | 电脑装机 | 摄影摄像 | 影音智能 |
-| ---- | ---- | ---- | ---- |
-| 95   | 189  | 190  | 191  |
+| -------- | -------- | -------- | -------- |
+| 95       | 189      | 190      | 191      |
 
 生活
 
-| 搞笑  | 日常 | 美食圈 | 动物圈 | 手工  | 绘画  | 运动  | 汽车  | 其他  | ~~ASMR~~ |
-| --- | -- | --- | --- | --- | --- | --- | --- | --- | -------- |
-| 138 | 21 | 76  | 75  | 161 | 162 | 163 | 176 | 174 | 175      |
+| 搞笑 | 日常 | 美食圈 | 动物圈 | 手工 | 绘画 | 运动 | 汽车 | 其他 | ~~ASMR~~ |
+| ---- | ---- | ------ | ------ | ---- | ---- | ---- | ---- | ---- | -------- |
+| 138  | 21   | 76     | 75     | 161  | 162  | 163  | 176  | 174  | 175      |
 
 鬼畜
 
 | 鬼畜调教 | 音 MAD | 人力 VOCALOID | 教程演示 |
-| ---- | ----- | ----------- | ---- |
-| 22   | 26    | 126         | 127  |
+| -------- | ------ | ------------- | -------- |
+| 22       | 26     | 126           | 127      |
 
 时尚
 
-| 美妆  | 服饰  | 健身  | T 台 | 风向标 |
-| --- | --- | --- | --- | --- |
-| 157 | 158 | 164 | 159 | 192 |
+| 美妆 | 服饰 | 健身 | T 台 | 风向标 |
+| ---- | ---- | ---- | ---- | ------ |
+| 157  | 158  | 164  | 159  | 192    |
 
 ~~广告~~
 
 | ~~广告~~ |
-| ------ |
-| 166    |
+| -------- |
+| 166      |
 
 资讯
 
-| 热点  | 环球  | 社会  | 综合  |
-| --- | --- | --- | --- |
-| 203 | 204 | 205 | 206 |
+| 热点 | 环球 | 社会 | 综合 |
+| ---- | ---- | ---- | ---- |
+| 203  | 204  | 205  | 206  |
 
 娱乐
 
-| 综艺 | 明星  | Korea 相关 |
-| -- | --- | -------- |
-| 71 | 137 | 131      |
+| 综艺 | 明星 | Korea 相关 |
+| ---- | ---- | ---------- |
+| 71   | 137  | 131        |
 
 影视
 
 | 影视杂谈 | 影视剪辑 | 短片 | 预告・资讯 |
-| ---- | ---- | -- | ----- |
-| 182  | 183  | 85 | 184   |
+| -------- | -------- | ---- | ---------- |
+| 182      | 183      | 85   | 184        |
 
 纪录片
 
-| 全部  | 人文・历史 | 科学・探索・自然 | 军事  | 社会・美食・旅行 |
-| --- | ----- | -------- | --- | -------- |
-| 177 | 37    | 178      | 179 | 180      |
+| 全部 | 人文・历史 | 科学・探索・自然 | 军事 | 社会・美食・旅行 |
+| ---- | ---------- | ---------------- | ---- | ---------------- |
+| 177  | 37         | 178              | 179  | 180              |
 
 电影
 
 | 全部 | 华语电影 | 欧美电影 | 日本电影 | 其他国家 |
-| -- | ---- | ---- | ---- | ---- |
-| 23 | 147  | 145  | 146  | 83   |
+| ---- | -------- | -------- | -------- | -------- |
+| 23   | 147      | 145      | 146      | 83       |
 
 电视剧
 
 | 全部 | 国产剧 | 海外剧 |
-| -- | --- | --- |
-| 11 | 185 | 187 |
+| ---- | ------ | ------ |
+| 11   | 185    | 187    |
 
 </Route>
 
@@ -222,9 +238,9 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 分区 id 的取值请参考下表：
 
-| 全部分区 | 动画 | 番剧 | 国创  | 音乐 | 舞蹈  | 游戏 | 知识 | 科技  | 运动  | 汽车  | 生活  | 美食  | 动物圈 | 鬼畜  | 时尚  | 资讯  | 娱乐 | 影视  | 纪录片 | 电影 | 电视剧 |
-| ---- | -- | -- | --- | -- | --- | -- | -- | --- | --- | --- | --- | --- | --- | --- | --- | --- | -- | --- | --- | -- | --- |
-| 0    | 1  | 13 | 167 | 3  | 129 | 4  | 36 | 188 | 234 | 223 | 160 | 211 | 217 | 119 | 155 | 202 | 5  | 181 | 177 | 23 | 11  |
+| 全部分区 | 动画 | 番剧 | 国创 | 音乐 | 舞蹈 | 游戏 | 知识 | 科技 | 运动 | 汽车 | 生活 | 美食 | 动物圈 | 鬼畜 | 时尚 | 资讯 | 娱乐 | 影视 | 纪录片 | 电影 | 电视剧 |
+| -------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ---- | ---- | ---- | ---- | ---- | ------ | ---- | ------ |
+| 0        | 1    | 13   | 167  | 3    | 129  | 4    | 36   | 188  | 234  | 223  | 160  | 211  | 217    | 119  | 155  | 202  | 5    | 181  | 177    | 23   | 11     |
 
 </Route>
 
@@ -289,8 +305,8 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 <Route author="DIYgod" example="/bilibili/mall/new/1" path="/bilibili/mall/new/:category?" :paramsDesc="['分类，默认全部，见下表']">
 
 | 全部 | 手办 | 魔力赏 | 周边 | 游戏 |
-| -- | -- | --- | -- | -- |
-| 0  | 1  | 7   | 3  | 6  |
+| ---- | ---- | ------ | ---- | ---- |
+| 0    | 1    | 7      | 3    | 6    |
 
 </Route>
 
@@ -302,13 +318,17 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="ziminliu" example="/bilibili/popular/all" path="/bilibili/popular/all" />
 
+### bilibili 热搜
+
+<Route author="CaoMeiYouRen" example="/bilibili/hot-search" path="/bilibili/hot-search" />
+
 ### 排行榜
 
 <Route author="DIYgod" example="/bilibili/ranking/0/3/1" path="/bilibili/ranking/:tid/:days?/:arc_type?/:disableEmbed?" :paramsDesc="['排行榜分区 id, 默认 0', '时间跨度, 可为 1 3 7 30', '投稿时间, 可为 0(全部投稿) 1(近期投稿) , 默认 1', '默认为开启内嵌视频, 任意值为关闭']">
 
-| 全站 | 动画 | 国创相关 | 音乐 | 舞蹈  | 游戏 | 科技 | 数码  | 生活  | 鬼畜  | 时尚  | 娱乐 | 影视  |
-| -- | -- | ---- | -- | --- | -- | -- | --- | --- | --- | --- | -- | --- |
-| 0  | 1  | 168  | 3  | 129 | 4  | 36 | 188 | 160 | 119 | 155 | 5  | 181 |
+| 全站 | 动画 | 国创相关 | 音乐 | 舞蹈 | 游戏 | 科技 | 数码 | 生活 | 鬼畜 | 时尚 | 娱乐 | 影视 |
+| ---- | ---- | -------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 0    | 1    | 168      | 3    | 129  | 4    | 36   | 188  | 160  | 119  | 155  | 5    | 181  |
 
 </Route>
 
@@ -344,6 +364,24 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 </Route>
 
+## Crossbell
+
+### Notes
+
+<Route author="DIYgod" example="/crossbell/notes" path="/crossbell/notes" radar="1" rssbud="1"/>
+
+### Notes of character
+
+<Route author="DIYgod" example="/crossbell/notes/character/10" path="/crossbell/notes/character/:characterId" radar="1" rssbud="1"/>
+
+### Notes of source
+
+<Route author="DIYgod" example="/crossbell/notes/source/xlog" path="/crossbell/notes/source/:source" radar="1" rssbud="1"/>
+
+### Feeds of following
+
+<Route author="DIYgod" example="/crossbell/feeds/following/10" path="/crossbell/feeds/following/:characterId" radar="1" rssbud="1"/>
+
 ## Curius
 
 ### 用户
@@ -357,8 +395,8 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 <Route author="dwemerx" example="/dev.to/top/month" path="/dev.to/top/:period" :paramsDesc="['period']">
 
 | 开发到每周最高 | 开发至每月最高 | 开发年度最高 | 开发到有史以来最高职位 |
-| ------- | ------- | ------ | ----------- |
-| week    | month   | year   | infinity    |
+| -------------- | -------------- | ------------ | ---------------------- |
+| week           | month          | year         | infinity               |
 
 </Route>
 
@@ -382,7 +420,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 类型 type
 
-| 艺术品     | 手工     | 音乐    | 写作      |
+| 艺术品  | 手工   | 音乐  | 写作    |
 | ------- | ------ | ----- | ------- |
 | artwork | crafts | music | writing |
 
@@ -454,6 +492,12 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="zphw" example="/gab/popular/hot" path="/gab/popular/:sort?" :paramsDesc="['排序方式, `hot` 為 Hot Posts, `top` 為 Top Posts。默認為 hot']" />
 
+## GETTR
+
+### 个人时间线
+
+<Route author="TonyRL" example="/gettr/user/jasonmillerindc" path="/gettr/user/:id" :paramsDesc="['用户 id']" radar="1" rssbud="1"/>
+
 ## iCity
 
 ### 用户动态
@@ -464,15 +508,29 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ::: warning 注意
 
-由于 Instagram API 限制，必须在服务器上设置你的用户名和密码。暂不支持两步验证。步骤见部署指南。
+由于 Instagram Private API 限制，必须在服务器上设置你的用户名和密码。暂不支持两步验证。步骤见[部署指南](https://docs.rsshub.app/install/)。
 
-如需无登录的 feed，请用 Picuki。
+如需无登录的 feed，请用 [Picuki](#picuki)。
 
 :::
 
-### 用户
+### 用户 / 标签 - Private API
 
-<Route author="oppilate DIYgod" example="/instagram/user/stefaniejoosten" path="/instagram/:category/:key" :paramsDesc="['时间线类别，目前仅支持用户时间线','针对该类别的索引，例如用户时间线里是用户名或用户 ID']" radar="1" anticrawler="1"/>
+<Route author="oppilate DIYgod" example="/instagram/user/stefaniejoosten" path="/instagram/:category/:key" :paramsDesc="['类别，见下表', '用户名／标签名']" radar="1" anticrawler="1" selfhost="1">
+
+| 用户时间线 | 标签 |
+| ---------- | ---- |
+| user       | tags |
+
+::: tip Tips
+建议在部署时使用 Redis 缓存。
+:::
+
+</Route>
+
+### 用户 / 标签 - Cookie
+
+<Route author="TonyRL" example="/instagram/2/user/stefaniejoosten" path="/instagram/2/:category/:key" :paramsDesc="['类别，见上表', '用户名／标签名']" radar="1" anticrawler="1" selfhost="1" />
 
 ## Keep
 
@@ -490,9 +548,9 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="hoilc nczitzk" example="/lofter/tag/摄影/date" path="/lofter/tag/:name?/:type?" :paramsDesc="['话题(标签)名 例如 `名侦探柯南`，默认为 `摄影`', '排行类型, 见下表，默认显示最新']">
 
-| new | date | week | month | total |
-| --- | ---- | ---- | ----- | ----- |
-| 最新  | 日榜   | 周榜   | 月榜    | 总榜    |
+| new  | date | week | month | total |
+| ---- | ---- | ---- | ----- | ----- |
+| 最新 | 日榜 | 周榜 | 月榜  | 总榜  |
 
 </Route>
 
@@ -507,7 +565,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 例如：<https://pawoo.net/users/pawoo_support.rss> 或 <https://pawoo.net/users/pawoo_support.atom>
 
-上述订阅源的内容不包括用户的转嘟。RSSHub 提供基于 Mastodon API 的订阅源，但需要您在某个 Mastodon 实例申请 API，并对 RSSHub 实例进行配置。详情见部署页面的配置模块。
+上述订阅源的内容不包括用户的转嘟。RSSHub 提供基于 Mastodon API 的订阅源，但可能需要您在某个 Mastodon 实例申请 API，并对 RSSHub 实例进行配置。详情见部署页面的[配置模块](/install/#route-specific-configurations)。
 
 :::
 
@@ -515,17 +573,33 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="notofoe" example="/mastodon/acct/CatWhitney@mastodon.social/statuses" path="/mastodon/acct/:acct/statuses/:only_media?" :paramsDesc="['Webfinger account URI, 形如 `user@host`', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
 
+自 Mastodon v4.0.0 起，本路由中对于 `search` API 的使用不再需要访问令牌。
+如果你的 Webfinger account URI 域和实例的 API 服务器域名是一样的（即没有一些其他协议称呼的 deletation），那么此路由不需要额外配置且开箱即用。
+不过，你依然可以提供这些路由特定的配置来覆盖它们。
+
 ### 实例公共时间线（本站）
 
 <Route author="hoilc" example="/mastodon/timeline/pawoo.net/true" path="/mastodon/timeline/:site/:only_media?" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
+
+实例地址不为 `mastodon.social` 或 `pawoo.net` 的情况下均需要 `ALLOW_USER_SUPPLY_UNSAFE_DOMAIN` 为 `true`。
 
 ### 实例公共时间线（跨站）
 
 <Route author="hoilc" example="/mastodon/remote/pawoo.net/true" path="/mastodon/remote/:site/:only_media?" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
 
+实例地址不为 `mastodon.social` 或 `pawoo.net` 的情况下均需要 `ALLOW_USER_SUPPLY_UNSAFE_DOMAIN` 为 `true`。
+
 ### 用户公共时间线（备用）
 
 <Route author="notofoe" example="/mastodon/account_id/mastodon.social/23634/statuses/only_media" path="/mastodon/account/:site/:account_id/statuses/:only_media?" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头', '用户 ID. 登录实例后, 搜索用户并进入用户页, 在地址中可以找到这串数字', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
+
+实例地址不为 `mastodon.social` 或 `pawoo.net` 的情况下均需要 `ALLOW_USER_SUPPLY_UNSAFE_DOMAIN` 为 `true`。
+
+## Misskey
+
+### 精选笔记
+
+<Route author="Misaka13514" example="/misskey/notes/featured/misskey.io" path="/misskey/notes/featured/:site" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头']" radar="1" rssbud="1"/>
 
 ## piapro
 
@@ -543,11 +617,11 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="hoilc Rongronggg9" example="/picuki/profile/stefaniejoosten" path="/picuki/profile/:id/:functionalFlag?" :paramsDesc="['Instagram 用户 id','功能标记，见下表']" radar="1" rssbud="1">
 
-| functionalFlag | 嵌入视频         | 获取 Instagram Stories |
-| -------------- | ------------ | -------------------- |
-| 0              | 关，只用图片显示视频封面 | 关                    |
-| 1 (默认)         | 开            | 关                    |
-| 10             | 开            | 开                    |
+| functionalFlag | 嵌入视频                 | 获取 Instagram Stories |
+| -------------- | ------------------------ | ---------------------- |
+| 0              | 关，只用图片显示视频封面 | 关                     |
+| 1 (默认)       | 开                       | 关                     |
+| 10             | 开                       | 开                     |
 
 ::: warning 注意
 
@@ -576,13 +650,13 @@ Instagram Stories 没有可靠的 guid，你的 RSS 阅读器可能将同一条 
 
 <Route author="EYHN" example="/pixiv/ranking/week" path="/pixiv/ranking/:mode/:date?" :paramsDesc="['排行榜类型' ,'日期, 取值形如 `2018-4-25`']" radar="1" rssbud="1">
 
-| pixiv 日排行 | pixiv 周排行 | pixiv 月排行 | pixiv 受男性欢迎排行 | pixiv 受女性欢迎排行 | AI 生成作品排行榜 | pixiv 原创作品排行  | pixiv 新人排行  |
-| --------- | --------- | --------- | ------------- | ------------- | ---------- | ------------- | ----------- |
-| day       | week      | month     | day_male      | day_female    | day_ai     | week_original | week_rookie |
+| 日排行 | 周排行 | 月排行 | 受男性欢迎排行 | 受女性欢迎排行 | AI 生成作品排行榜 | 原创作品排行  | 新人排行    |
+| ------ | ------ | ------ | -------------- | -------------- | ----------------- | ------------- | ----------- |
+| day    | week   | month  | day_male       | day_female     | day_ai            | week_original | week_rookie |
 
-| pixiv R-18 日排行 | pixiv R-18 受男性欢迎排行 | pixiv R-18 受女性欢迎排行 | pixiv R-18 周排行 | pixiv R-18G 排行 |
-| -------------- | ------------------ | ------------------ | -------------- | -------------- |
-| day_r18        | day_male_r18       | day_female_r18     | week_r18       | week_r18g      |
+| pixiv R-18 日排行 | R-18 AI 生成作品排行 | R-18 受男性欢迎排行 | R-18 受女性欢迎排行 | R-18 周排行 | R-18G 排行 |
+| ----------------- | -------------------- | ------------------- | ------------------- | ----------- | ---------- |
+| day_r18           | day_r18_ai           | day_male_r18        | day_female_r18      | week_r18    | week_r18g  |
 
 </Route>
 
@@ -590,9 +664,9 @@ Instagram Stories 没有可靠的 guid，你的 RSS 阅读器可能将同一条 
 
 <Route author="DIYgod" example="/pixiv/search/麻衣/popular/2" path="/pixiv/search/:keyword/:order?/:mode?" :paramsDesc="['关键词', '排序方式，popular 按热门度排序，空或其他任意值按时间排序', '过滤方式']" radar="1" rssbud="1">
 
-| 只看非 R18 内容 | 只看 R18 内容 | 不过滤     |
-| ---------- | --------- | ------- |
-| safe       | r18       | 空或其他任意值 |
+| 只看非 R18 内容 | 只看 R18 内容 | 不过滤         |
+| --------------- | ------------- | -------------- |
+| safe            | r18           | 空或其他任意值 |
 
 </Route>
 
@@ -624,13 +698,13 @@ Instagram Stories 没有可靠的 guid，你的 RSS 阅读器可能将同一条 
 
 <Route author="TonyRL" path="/plurk/top/:category?/:lang?" example="/plurk/top/topReplurks" :paramsDesc="['排行榜分類，見下表，默認為 `topReplurks`', '語言，見下表，默認為 `en`']" radar="1" rssbud="1">
 
-| 最多人轉噗       | 最多人喜歡        | 最多人回應        |
+| 最多人轉噗  | 最多人喜歡   | 最多人回應   |
 | ----------- | ------------ | ------------ |
 | topReplurks | topFavorites | topResponded |
 
 | English | 中文（繁體） |
-| ------- | ------ |
-| en      | zh     |
+| ------- | ------------ |
+| en      | zh           |
 
 </Route>
 
@@ -688,21 +762,21 @@ Instagram Stories 没有可靠的 guid，你的 RSS 阅读器可能将同一条 
 
 <Route author="DIYgod Rongronggg9" example="/telegram/channel/awesomeDIYgod/searchQuery=%23DIYgod的豆瓣动态" path="/telegram/channel/:username/:routeParams?" :paramsDesc="['频道 username', '额外参数，请参阅下面的表格']" radar="1" rssbud="1">
 
-| 键                     | 含义                      | 接受的值                             | 默认值    |
-| --------------------- | ----------------------- | -------------------------------- | ------ |
-| showLinkPreview       | 是否显示 Telegram 的链接预览     | 0/1/true/false                   | true   |
-| showViaBot            | 对于经 bot 发出的消息，是否显示该 bot | 0/1/true/false                   | true   |
-| showReplyTo           | 对于回复消息，是否显示回复的目标        | 0/1/true/false                   | true   |
-| showFwdFrom           | 对于转发消息，是否显示消息的转发来源      | 0/1/true/false                   | true   |
-| showFwdFromAuthor     | 对于转发消息，是否显示消息的转发来源的原始作者 | 0/1/true/false                   | true   |
-| showInlineButtons     | 是否显示消息的按钮               | 0/1/true/false                   | false  |
-| showMediaTagInTitle   | 是否在标题中显示媒体标签            | 0/1/true/false                   | true   |
-| showMediaTagAsEmoji   | 将媒体标签显示为 emoji          | 0/1/true/false                   | true   |
-| includeFwd            | 包含转发消息                  | 0/1/true/false                   | true   |
-| includeReply          | 包含回复消息                  | 0/1/true/false                   | true   |
-| includeServiceMsg     | 包含服务消息 (如：置顶了消息，更换了头像)  | 0/1/true/false                   | true   |
-| includeUnsupportedMsg | 包含 t.me 不支持的消息          | 0/1/true/false                   | false  |
-| searchQuery           | 搜索关键词                   | 关键词；如需搜索 hashtag 请用 `%23` 替代 `#` | (禁用搜索) |
+| 键                    | 含义                                           | 接受的值                                     | 默认值     |
+| --------------------- | ---------------------------------------------- | -------------------------------------------- | ---------- |
+| showLinkPreview       | 是否显示 Telegram 的链接预览                   | 0/1/true/false                               | true       |
+| showViaBot            | 对于经 bot 发出的消息，是否显示该 bot          | 0/1/true/false                               | true       |
+| showReplyTo           | 对于回复消息，是否显示回复的目标               | 0/1/true/false                               | true       |
+| showFwdFrom           | 对于转发消息，是否显示消息的转发来源           | 0/1/true/false                               | true       |
+| showFwdFromAuthor     | 对于转发消息，是否显示消息的转发来源的原始作者 | 0/1/true/false                               | true       |
+| showInlineButtons     | 是否显示消息的按钮                             | 0/1/true/false                               | false      |
+| showMediaTagInTitle   | 是否在标题中显示媒体标签                       | 0/1/true/false                               | true       |
+| showMediaTagAsEmoji   | 将媒体标签显示为 emoji                         | 0/1/true/false                               | true       |
+| includeFwd            | 包含转发消息                                   | 0/1/true/false                               | true       |
+| includeReply          | 包含回复消息                                   | 0/1/true/false                               | true       |
+| includeServiceMsg     | 包含服务消息 (如：置顶了消息，更换了头像)      | 0/1/true/false                               | true       |
+| includeUnsupportedMsg | 包含 t.me 不支持的消息                         | 0/1/true/false                               | false      |
+| searchQuery           | 搜索关键词                                     | 关键词；如需搜索 hashtag 请用 `%23` 替代 `#` | (禁用搜索) |
 
 指定更多与默认值不同的参数选项可以满足不同的需求，如
 
@@ -741,27 +815,28 @@ Instagram Stories 没有可靠的 guid，你的 RSS 阅读器可能将同一条 
 
 对于推文内容，在 `routeParams` 参数中以 query string 格式指定选项，可以控制额外的功能
 
-| 键                              | 含义                                                                            | 接受的值                   | 默认值                                       |
-| ------------------------------ | ----------------------------------------------------------------------------- | ---------------------- | ----------------------------------------- |
-| `readable`                     | 是否开启细节排版可读性优化                                                                 | `0`/`1`/`true`/`false` | `false`                                   |
-| `authorNameBold`               | 是否加粗作者名字                                                                      | `0`/`1`/`true`/`false` | `false`                                   |
-| `showAuthorInTitle`            | 是否在标题处显示作者                                                                    | `0`/`1`/`true`/`false` | `false` (`/twitter/followings` 中为 `true`) |
-| `showAuthorInDesc`             | 是否在正文处显示作者                                                                    | `0`/`1`/`true`/`false` | `false` (`/twitter/followings` 中为 `true`) |
-| `showQuotedAuthorAvatarInDesc` | 是否在正文处显示被转推的推文的作者头像（若阅读器会提取正文图片，不建议开启）                                        | `0`/`1`/`true`/`false` | `false`                                   |
-| `showAuthorAvatarInDesc`       | 是否在正文处显示作者头像（若阅读器会提取正文图片，不建议开启）                                               | `0`/`1`/`true`/`false` | `false`                                   |
-| `showEmojiForRetweetAndReply`  | 显示 “🔁” 取代 “Rt”、“↩️” 取代 “Re”                                                  | `0`/`1`/`true`/`false` | `false`                                   |
-| `showRetweetTextInTitle`       | 在标题处显示转推评论（置为 `false` 则在标题只显示被转推推文）                                           | `0`/`1`/`true`/`false` | `true`                                    |
-| `addLinkForPics`               | 为图片添加可点击的链接                                                                   | `0`/`1`/`true`/`false` | `false`                                   |
-| `showTimestampInDescription`   | 在正文处显示推特的时间戳                                                                  | `0`/`1`/`true`/`false` | `false`                                   |
-| `showQuotedInTitle`            | 在标题处显示被引用的推文                                                                  | `0`/`1`/`true`/`false` | `false`                                   |
-| `widthOfPics`                  | 推文配图宽（生效取决于阅读器）                                                               | 不指定 / 数字               | 不指定                                       |
-| `heightOfPics`                 | 推文配图高（生效取决于阅读器）                                                               | 不指定 / 数字               | 不指定                                       |
-| `sizeOfAuthorAvatar`           | 作者头像大小                                                                        | 数字                     | `48`                                      |
-| `sizeOfQuotedAuthorAvatar`     | 被转推推文作者头像大小                                                                   | 数字                     | `24`                                      |
-| `excludeReplies`               | 排除回复，只在 `/twitter/user` 中有效                                                   | `0`/`1`/`true`/`false` | `false`                                   |
-| `includeRts`                   | 包括转推，只在 `/twitter/user` 中有效                                                   | `0`/`1`/`true`/`false` | `true`                                    |
-| `forceWebApi`                  | 强制使用 Web API，即使 Developer API 已配置，只在 `/twitter/user` 和 `/twitter/keyword` 中有效 | `0`/`1`/`true`/`false` | `false`                                   |
-| `count`                        | 传递给 Twitter API 的 `count` 参数，只在 `/twitter/user` 中有效                           | 不指定 / 数字               | 不指定                                       |
+| 键                             | 含义                                                                                           | 接受的值               | 默认值                                      |
+| ------------------------------ | ---------------------------------------------------------------------------------------------- | ---------------------- | ------------------------------------------- |
+| `readable`                     | 是否开启细节排版可读性优化                                                                     | `0`/`1`/`true`/`false` | `false`                                     |
+| `authorNameBold`               | 是否加粗作者名字                                                                               | `0`/`1`/`true`/`false` | `false`                                     |
+| `showAuthorInTitle`            | 是否在标题处显示作者                                                                           | `0`/`1`/`true`/`false` | `false` (`/twitter/followings` 中为 `true`) |
+| `showAuthorInDesc`             | 是否在正文处显示作者                                                                           | `0`/`1`/`true`/`false` | `false` (`/twitter/followings` 中为 `true`) |
+| `showQuotedAuthorAvatarInDesc` | 是否在正文处显示被转推的推文的作者头像（若阅读器会提取正文图片，不建议开启）                   | `0`/`1`/`true`/`false` | `false`                                     |
+| `showAuthorAvatarInDesc`       | 是否在正文处显示作者头像（若阅读器会提取正文图片，不建议开启）                                 | `0`/`1`/`true`/`false` | `false`                                     |
+| `showEmojiForRetweetAndReply`  | 显示 “🔁” 取代 “Rt”、“↩️” 取代 “Re”                                                            | `0`/`1`/`true`/`false` | `false`                                     |
+| `showSymbolForRetweetAndReply` | 显示 “RT” 取代 “”、“ Re ” 取代 “”                                                              | `0`/`1`/`true`/`false` | `true`                                      |
+| `showRetweetTextInTitle`       | 在标题处显示转推评论（置为 `false` 则在标题只显示被转推推文）                                  | `0`/`1`/`true`/`false` | `true`                                      |
+| `addLinkForPics`               | 为图片添加可点击的链接                                                                         | `0`/`1`/`true`/`false` | `false`                                     |
+| `showTimestampInDescription`   | 在正文处显示推特的时间戳                                                                       | `0`/`1`/`true`/`false` | `false`                                     |
+| `showQuotedInTitle`            | 在标题处显示被引用的推文                                                                       | `0`/`1`/`true`/`false` | `false`                                     |
+| `widthOfPics`                  | 推文配图宽（生效取决于阅读器）                                                                 | 不指定 / 数字          | 不指定                                      |
+| `heightOfPics`                 | 推文配图高（生效取决于阅读器）                                                                 | 不指定 / 数字          | 不指定                                      |
+| `sizeOfAuthorAvatar`           | 作者头像大小                                                                                   | 数字                   | `48`                                        |
+| `sizeOfQuotedAuthorAvatar`     | 被转推推文作者头像大小                                                                         | 数字                   | `24`                                        |
+| `excludeReplies`               | 排除回复，只在 `/twitter/user` 中有效                                                          | `0`/`1`/`true`/`false` | `false`                                     |
+| `includeRts`                   | 包括转推，只在 `/twitter/user` 中有效                                                          | `0`/`1`/`true`/`false` | `true`                                      |
+| `forceWebApi`                  | 强制使用 Web API，即使 Developer API 已配置，只在 `/twitter/user` 和 `/twitter/keyword` 中有效 | `0`/`1`/`true`/`false` | `false`                                     |
+| `count`                        | 传递给 Twitter API 的 `count` 参数，只在 `/twitter/user` 中有效                                | 不指定 / 数字          | 不指定                                      |
 
 指定更多与默认值不同的参数选项可以改善 RSS 的可读性，如
 
@@ -773,11 +848,11 @@ Instagram Stories 没有可靠的 guid，你的 RSS 阅读器可能将同一条 
 
 ### 用户时间线
 
-<Route author="DIYgod yindaheng98 Rongronggg9" example="/twitter/user/DIYgod" path="/twitter/user/:id/:routeParams?" :paramsDesc="['用户名', '额外参数；请参阅上面的说明和表格；特别地，当 `routeParams=exclude_replies`时去除回复，`routeParams=exclude_rts`去除转推，`routeParams=exclude_rts_replies`去除回复和转推，默认包含全部回复和转推。']" radar="1" rssbud="1"/>
+<Route author="DIYgod yindaheng98 Rongronggg9" example="/twitter/user/DIYgod" path="/twitter/user/:id/:routeParams?" :paramsDesc="['用户名；特别地，以 `+` 开头则代表[唯一 ID](https://github.com/DIYgod/RSSHub/issues/12221)，如 `+44196397`', '额外参数；请参阅上面的说明和表格；特别地，当 `routeParams=exclude_replies`时去除回复，`routeParams=exclude_rts`去除转推，`routeParams=exclude_rts_replies`去除回复和转推，默认包含全部回复和转推。']" radar="1" rssbud="1"/>
 
 ### 用户媒体时间线
 
-<Route author="yindaheng98 Rongronggg9" example="/twitter/media/DIYgod" path="/twitter/media/:id/:routeParams?" :paramsDesc="['用户名', '额外参数；请参阅上面的说明和表格。']" radar="1" rssbud="1"/>
+<Route author="yindaheng98 Rongronggg9" example="/twitter/media/DIYgod" path="/twitter/media/:id/:routeParams?" :paramsDesc="['用户名；特别地，以 `+` 开头则代表[唯一 ID](https://github.com/DIYgod/RSSHub/issues/12221)，如 `+44196397`', '额外参数；请参阅上面的说明和表格。']" radar="1" rssbud="1"/>
 
 ### 用户关注时间线
 
@@ -819,6 +894,10 @@ Instagram Stories 没有可靠的 guid，你的 RSS 阅读器可能将同一条 
 
 </Route>
 
+### 推文详情
+
+<Route author="LarchLiu Rongronggg9" example="/twitter/tweet/DIYgod/status/1650844643997646852" path="/twitter/tweet/:id/status/:status/:original?" :paramsDesc="['用户名；特别地，以 `+` 开头则代表[唯一 ID](https://github.com/DIYgod/RSSHub/issues/12221)，如 `+44196397`', '推文 ID', '额外参数；返回数据类型，当非 `0`/`false` 且 `config.isPackage` 为 `true`时，返回 twitter 原始数据']" radar="1" rssbud="1"/>
+
 ## Vimeo
 
 ### 用户页面
@@ -841,7 +920,7 @@ Instagram Stories 没有可靠的 guid，你的 RSS 阅读器可能将同一条 
 
 ### 分类页面
 
-<Route author="MisteryMonster" example="/vimeo/category/documentary/staffpicks" path="/vimeo/category/:category/:staffpicks?" :paramsDesc="['主分类名可从 url 获得，如 [https://vimeo.com/categories/documentary/videos](https://vimeo.com/categories/documentary/videos) 中的 `documentary`。', '填入 `staffpicks` 则按 staffpicks 排序']" radar="1">
+<Route author="MisteryMonster" example="/vimeo/category/documentary/staffpicks" path="/vimeo/category/:category/:staffpicks?" :paramsDesc="['主分类名可从 url 获得，如 [https://vimeo.com/categories/documentary/videos](https://vimeo.com/categories/documentary/videos) 中的 `documentary`', '填入 `staffpicks` 则按 staffpicks 排序']" radar="1">
 
 </Route>
 
@@ -871,19 +950,77 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 :::
 
-<Route author="DIYgod" example="/youtube/channel/UCDwDMPOZfxVV0x_dz0eQ8KQ" path="/youtube/channel/:id/:disableEmbed?" :paramsDesc="['频道 id', '默认为开启内嵌视频, 任意值为关闭']" radar="1" rssbud="1"/>
+<Route author="DIYgod" example="/youtube/channel/UCDwDMPOZfxVV0x_dz0eQ8KQ" path="/youtube/channel/:id/:disableEmbed?" :paramsDesc="['频道 id', '默认为开启内嵌视频，任意值为关闭']" radar="1" rssbud="1"/>
 
 ### 自定义网址
 
-<Route author="TonyRL" path="/youtube/c/:id/:embed?" example="/youtube/c/YouTubeCreators" :paramsDesc="['YouTube 自定义网址', '默认为开启内嵌视频, 任意值为关闭']" radar="1" rssbud="1"/>
+<Route author="TonyRL" path="/youtube/c/:id/:embed?" example="/youtube/c/YouTubeCreators" :paramsDesc="['YouTube 自定义网址', '默认为开启内嵌视频，任意值为关闭']" radar="1" rssbud="1"/>
 
 ### 播放列表
 
-<Route author="HenryQW" example="/youtube/playlist/PLqQ1RwlxOgeLTJ1f3fNMSwhjVgaWKo_9Z" path="/youtube/playlist/:id/:disableEmbed?" :paramsDesc="['播放列表 id', '默认为开启内嵌视频, 任意值为关闭']" radar="1" rssbud="1"/>
+<Route author="HenryQW" example="/youtube/playlist/PLqQ1RwlxOgeLTJ1f3fNMSwhjVgaWKo_9Z" path="/youtube/playlist/:id/:disableEmbed?" :paramsDesc="['播放列表 id', '默认为开启内嵌视频，任意值为关闭']" radar="1" rssbud="1"/>
+
+### 社群
+
+<Route author="TonyRL" path="/youtube/community/:handle" example="/youtube/community/@JFlaMusic" :paramsDesc="['YouTube 帐号代码或频道 id']" radar="1" rssbud="1"/>
 
 ### 订阅列表
 
-<Route author="TonyRL" path="/youtube/subscriptions/:embed?" example="/youtube/subscriptions" :paramsDesc="['默认为开启内嵌视频, 任意值为关闭']" selfhost="1" radar="1" rssbud="1"/>
+<Route author="TonyRL" path="/youtube/subscriptions/:embed?" example="/youtube/subscriptions" :paramsDesc="['默认为开启内嵌视频，任意值为关闭']" selfhost="1" radar="1" rssbud="1"/>
+
+### 音乐排行榜
+
+<Route author="TonyRL" path="/youtube/charts/:category?/:country?/:embed?" example="/youtube/charts" :paramsDesc="['排行榜，见下表，默认为 `TopVideos`', '国家代码，见下表，默认为全球', '默认为开启内嵌视频，任意值为关闭']" radar="1" rssbud="1">
+
+::: details 排行榜
+
+| 热门音乐人 | 热门歌曲 | 热门音乐视频 | 时下流行       |
+| ---------- | -------- | ------------ | -------------- |
+| TopArtists | TopSongs | TopVideos    | TrendingVideos |
+
+:::
+
+::: details 国家代码
+
+| Argentina | Australia | Austria | Belgium | Bolivia | Brazil | Canada |
+| --------- | --------- | ------- | ------- | ------- | ------ | ------ |
+| ar        | au        | at      | be      | bo      | br     | ca     |
+
+| Chile | Colombia | Costa Rica | Czechia | Denmark | Dominican Republic | Ecuador |
+| ----- | -------- | ---------- | ------- | ------- | ------------------ | ------- |
+| cl    | co       | cr         | cz      | dk      | do                 | ec      |
+
+| Egypt | El Salvador | Estonia | Finland | France | Germany | Guatemala |
+| ----- | ----------- | ------- | ------- | ------ | ------- | --------- |
+| eg    | sv          | ee      | fi      | fr     | de      | gt        |
+
+| Honduras | Hungary | Iceland | India | Indonesia | Ireland | Israel | Italy |
+| -------- | ------- | ------- | ----- | --------- | ------- | ------ | ----- |
+| hn       | hu      | is      | in    | id        | ie      | il     | it    |
+
+| Japan | Kenya | Luxembourg | Mexico | Netherlands | New Zealand | Nicaragua |
+| ----- | ----- | ---------- | ------ | ----------- | ----------- | --------- |
+| jp    | ke    | lu         | mx     | nl          | nz          | ni        |
+
+| Nigeria | Norway | Panama | Paraguay | Peru | Poland | Portugal | Romania |
+| ------- | ------ | ------ | -------- | ---- | ------ | -------- | ------- |
+| ng      | no     | pa     | py       | pe   | pl     | pt       | ro      |
+
+| Russia | Saudi Arabia | Serbia | South Africa | South Korea | Spain | Sweden | Switzerland |
+| ------ | ------------ | ------ | ------------ | ----------- | ----- | ------ | ----------- |
+| ru     | sa           | rs     | za           | kr          | es    | se     | ch          |
+
+| Tanzania | Turkey | Uganda | Ukraine | United Arab Emirates | United Kingdom | United States |
+| -------- | ------ | ------ | ------- | -------------------- | -------------- | ------------- |
+| tz       | tr     | ug     | ua      | ae                   | gb             | us            |
+
+| Uruguay | Zimbabwe |
+| ------- | -------- |
+| uy      | zw       |
+
+:::
+
+</Route>
 
 ## 巴哈姆特
 
@@ -898,16 +1035,16 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 分类 ID 参考如下
 
 | 不限 | 日誌 | 小說 | 繪圖 | Cosplay | 同人商品 |
-| -- | -- | -- | -- | ------- | ---- |
-| 0  | 1  | 2  | 3  | 4       | 5    |
+| ---- | ---- | ---- | ---- | ------- | -------- |
+| 0    | 1    | 2    | 3    | 4       | 5        |
 
 子分类 ID 比较多不作列举
 
 排行类型参考如下
 
 | 達人專欄 | 最新創作 | 最新推薦 | 熱門創作 | 精選閣樓 |
-| ---- | ---- | ---- | ---- | ---- |
-| 1    | 2    | 3    | 4    | 5    |
+| -------- | -------- | -------- | -------- | -------- |
+| 1        | 2        | 3        | 4        | 5        |
 
 </Route>
 
@@ -944,8 +1081,8 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 额外参数
 
-| 键       | 含义       | 值                      | 默认值     |
-| ------- | -------- | ---------------------- | ------- |
+| 键      | 含义             | 值                     | 默认值  |
+| ------- | ---------------- | ---------------------- | ------- |
 | `embed` | 是否启用内嵌视频 | `0`/`1`/`true`/`false` | `false` |
 
 ### 博主
@@ -982,7 +1119,7 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 <Route author="umm233 nczitzk" example="/douban/movie/weekly" path="/douban/movie/weekly/:type?" :paramsDesc="['分类，可在榜单页 URL 中找到，默认为一周口碑电影榜']">
 
-| 一周口碑电影榜           | 华语口碑剧集榜                |
+| 一周口碑电影榜    | 华语口碑剧集榜         |
 | ----------------- | ---------------------- |
 | movie_weekly_best | tv_chinese_best_weekly |
 
@@ -995,8 +1132,8 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 排序方式可选值如下
 
 | 近期热门 | 标记最多 | 评分最高 | 最近上映 |
-| ---- | ---- | ---- | ---- |
-| U    | T    | S    | R    |
+| -------- | -------- | -------- | -------- |
+| U        | T        | S        | R        |
 
 ### 豆瓣电影人
 
@@ -1022,7 +1159,7 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 <Route author="fengkx xyqfer" example="/douban/music/latest/chinese" path="/douban/music/latest/:area?" :paramsDesc="['区域类型，默认全部']">
 
-| 华语      | 欧美      | 日韩          |
+| 华语    | 欧美    | 日韩        |
 | ------- | ------- | ----------- |
 | chinese | western | japankorean |
 
@@ -1044,9 +1181,9 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 <Route author="xyqfer queensferryme" example="/douban/book/rank/fiction" path="/douban/book/rank/:type?" :paramsDesc="['图书类型，默认合并列表']">
 
-| 全部 | 虚构      | 非虚构        |
-| -- | ------- | ---------- |
-|    | fiction | nonfiction |
+| 全部 | 虚构    | 非虚构     |
+| ---- | ------- | ---------- |
+|      | fiction | nonfiction |
 
 </Route>
 
@@ -1068,21 +1205,21 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 对于豆瓣用户广播内容，在 `routeParams` 参数中以 query string 格式设置如下选项可以控制输出的样式
 
-| 键                          | 含义                                 | 接受的值           | 默认值   |
-| -------------------------- | ---------------------------------- | -------------- | ----- |
-| readable                   | 是否开启细节排版可读性优化                      | 0/1/true/false | false |
-| authorNameBold             | 是否加粗作者名字                           | 0/1/true/false | false |
-| showAuthorInTitle          | 是否在标题处显示作者                         | 0/1/true/false | true  |
-| showAuthorInDesc           | 是否在正文处显示作者                         | 0/1/true/false | false |
-| showAuthorAvatarInDesc     | 是否在正文处显示作者头像（若阅读器会提取正文图片，不建议开启）    | 0/1/true/false | false |
-| showEmojiForRetweet        | 显示 “🔁” 取代 “Fw”（转发）                | 0/1/true/false | false |
-| showRetweetTextInTitle     | 在标题出显示转发评论（置为 false 则在标题只显示被转发的广播） | 0/1/true/false | false |
-| addLinkForPics             | 为图片添加可点击的链接                        | 0/1/true/false | false |
-| showTimestampInDescription | 在正文处显示广播的时间戳                       | 0/1/true/false | false |
-| showComments               | 在正文处显示评论                           | 0/1/true/false | false |
-| widthOfPics                | 广播配图宽（生效取决于阅读器）                    | 不指定 / 数字       | 不指定   |
-| heightOfPics               | 广播配图高（生效取决于阅读器）                    | 不指定 / 数字       | 不指定   |
-| sizeOfAuthorAvatar         | 作者头像大小                             | 数字             | 48    |
+| 键                         | 含义                                                           | 接受的值       | 默认值 |
+| -------------------------- | -------------------------------------------------------------- | -------------- | ------ |
+| readable                   | 是否开启细节排版可读性优化                                     | 0/1/true/false | false  |
+| authorNameBold             | 是否加粗作者名字                                               | 0/1/true/false | false  |
+| showAuthorInTitle          | 是否在标题处显示作者                                           | 0/1/true/false | true   |
+| showAuthorInDesc           | 是否在正文处显示作者                                           | 0/1/true/false | false  |
+| showAuthorAvatarInDesc     | 是否在正文处显示作者头像（若阅读器会提取正文图片，不建议开启） | 0/1/true/false | false  |
+| showEmojiForRetweet        | 显示 “🔁” 取代 “Fw”（转发）                                    | 0/1/true/false | false  |
+| showRetweetTextInTitle     | 在标题出显示转发评论（置为 false 则在标题只显示被转发的广播）  | 0/1/true/false | false  |
+| addLinkForPics             | 为图片添加可点击的链接                                         | 0/1/true/false | false  |
+| showTimestampInDescription | 在正文处显示广播的时间戳                                       | 0/1/true/false | false  |
+| showComments               | 在正文处显示评论                                               | 0/1/true/false | false  |
+| widthOfPics                | 广播配图宽（生效取决于阅读器）                                 | 不指定 / 数字  | 不指定 |
+| heightOfPics               | 广播配图高（生效取决于阅读器）                                 | 不指定 / 数字  | 不指定 |
+| sizeOfAuthorAvatar         | 作者头像大小                                                   | 数字           | 48     |
 
 指定更多与默认值不同的参数选项可以改善 RSS 的可读性，如
 
@@ -1110,9 +1247,9 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 <Route author="umm233" example="/douban/channel/30168934/hot" path="/douban/channel/:id/:nav?" :paramsDesc="['频道id','专题分类，可选，默认为 default']">
 
-| 默认      | 热门  | 最新  |
-| ------- | --- | --- |
-| default | hot | new |
+| 默认    | 热门 | 最新 |
+| ------- | ---- | ---- |
+| default | hot  | new  |
 
 </Route>
 
@@ -1121,25 +1258,20 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 <Route author="umm233" example="/douban/channel/30168934/subject/0" path="/douban/channel/:id/subject/:nav" :paramsDesc="['频道id','书影音分类']">
 
 | 电影 | 电视剧 | 图书 | 唱片 |
-| -- | --- | -- | -- |
-| 0  | 1   | 2  | 3  |
+| ---- | ------ | ---- | ---- |
+| 0    | 1      | 2    | 3    |
 
 </Route>
 
 ### 用户想看
 
-<Route author="exherb" example="/douban/people/exherb/wish/torrentProvider=1337x" path="/douban/people/:userid/wish/:routeParams?" :paramsDesc="['用户id','额外参数；见下']">
+<Route author="exherb" example="/douban/people/exherb/wish" path="/douban/people/:userid/wish/:routeParams?" :paramsDesc="['用户id','额外参数；见下']">
 
 对于豆瓣用户想看的内容，在 `routeParams` 参数中以 query string 格式设置如下选项可以控制输出的样式
 
-| 键                | 含义                                                | 接受的值                            | 默认值 |
-| ---------------- | ------------------------------------------------- | ------------------------------- | --- |
-| pagesCount       | 查询页面数                                             |                                 | 1   |
-| torrentProvider  | 启用 torrent 搜索                                     | all/1337x/Eztv/Rarbg/Yts/HDHome |     |
-| passkey          | HDHome 密钥，当 torrentProvider 为 `all` 或 `HDHome` 必填 |                                 |     |
-| torrentQuery     | 额外关键词，如 `1080p`， 逗号分割                             |                                 |     |
-| torrentMinSeeds  | 最小 seeds 数                                        |                                 | 1   |
-| torrentMinRating | 种子和电影标题最小匹配度                                      |                                 | 0.5 |
+| 键         | 含义       | 接受的值 | 默认值 |
+| ---------- | ---------- | -------- | ------ |
+| pagesCount | 查询页面数 |          | 1      |
 
 </Route>
 
@@ -1147,9 +1279,38 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 <Route author="Fatpandac" example="/douban/jobs/campus" path="/douban/jobs/:type" :paramsDesc="['招聘类型，见下表']">
 
-|  社会招聘  |  校园招聘  |  实习生招聘 |
-| :----: | :----: | :----: |
-| social | campus | intern |
+| 社会招聘 | 校园招聘 | 实习生招聘 |
+| :------: | :------: | :--------: |
+|  social  |  campus  |   intern   |
+
+</Route>
+
+### 榜单与集合
+
+<Route author="5upernova-heng" example="/douban/list/subject_real_time_hotest" path="/douban/list/:type?" :paramsDesc="['榜单类型，见下表。默认为实时热门书影音']">
+
+| 榜单 / 集合        | 路由（type）               |
+| ------------------ | -------------------------- |
+| 实时热门书影音     | subject_real_time_hotest   |
+| 影院热映           | movie_showing              |
+| 实时热门电影       | movie_real_time_hotest     |
+| 实时热门电视       | tv_real_time_hotest        |
+| 一周口碑电影榜     | movie_weekly_best          |
+| 华语口碑剧集榜     | tv_chinese_best_weekly     |
+| 全球口碑剧集榜     | tv_global_best_weekly      |
+| 国内口碑综艺榜     | show_chinese_best_weekly   |
+| 国外口碑综艺榜     | show_global_best_weekly    |
+| 虚构类小说热门榜   | book_fiction_hot_weekly    |
+| 非虚构类小说热门榜 | book_nonfiction_hot_weekly |
+| 热门单曲榜         | music_single               |
+| 华语新碟榜         | music_chinese              |
+| ...                | ...                        |
+
+> 上面的榜单 / 集合并没有列举完整。
+>
+> 如何找到榜单对应的路由参数：
+> 在豆瓣手机 APP 中，对应地榜单页面右上角，点击分享链接。链接路径 `subject_collection` 后的路径就是路由参数 `type`。
+> 如：小说热门榜的分享链接为：`https://m.douban.com/subject_collection/ECDIHUN4A`，其对应本 RSS 路由的 `type` 为 `ECDIHUN4A`，对应的订阅链接路由：[`/douban/list/ECDIHUN4A`](https://rsshub.app/douban/list/ECDIHUN4A)
 
 </Route>
 
@@ -1183,11 +1344,11 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 ### 出版專題
 
-<Route author="Maecenas" example="/vocus/publication/bass" path="/vocus/publication/:id" :paramsDesc="['出版專題 id，可在出版專題主页的 URL 找到']"/>
+<Route author="Maecenas" example="/vocus/publication/bass" path="/vocus/publication/:id" :paramsDesc="['出版專題 id，可在出版專題主页的 URL 找到']" radar="1"/>
 
 ### 用户个人文章
 
-<Route author="LogicJake" example="/vocus/user/tsetyan" path="/vocus/user/:id" :paramsDesc="['用户 id，可在用户主页的 URL 找到']"/>
+<Route author="LogicJake" example="/vocus/user/tsetyan" path="/vocus/user/:id" :paramsDesc="['用户 id，可在用户主页的 URL 找到']" radar="1"/>
 
 ## 即刻
 
@@ -1227,9 +1388,9 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 <Route author="xizeyoupan" example="/coolapk/tuwen" path="/coolapk/tuwen/:type?" :paramsDesc="['默认为hot']">
 
-| 参数名称 | 编辑精选 | 最新     |
-| ---- | ---- | ------ |
-| type | hot  | latest |
+| 参数名称 | 编辑精选 | 最新   |
+| -------- | -------- | ------ |
+| type     | hot      | latest |
 
 </Route>
 
@@ -1237,9 +1398,9 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 <Route author="xizeyoupan" example="/coolapk/toutiao" path="/coolapk/toutiao/:type?" :paramsDesc="['默认为history']">
 
-| 参数名称 | 历史头条    | 最新     |
-| ---- | ------- | ------ |
-| type | history | latest |
+| 参数名称 | 历史头条 | 最新   |
+| -------- | -------- | ------ |
+| type     | history  | latest |
 
 </Route>
 
@@ -1266,12 +1427,12 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 <Route author="xizeyoupan" example="/coolapk/hot" path="/coolapk/hot/:type?/:period?" :paramsDesc="['默认为`jrrm`','默认为`daily`']">
 
 | 参数名称 | 今日热门 | 点赞榜 | 评论榜 | 收藏榜 | 酷图榜 |
-| ---- | ---- | --- | --- | --- | --- |
-| type | jrrm | dzb | plb | scb | ktb |
+| -------- | -------- | ------ | ------ | ------ | ------ |
+| type     | jrrm     | dzb    | plb    | scb    | ktb    |
 
-| 参数名称   | 日榜    | 周榜     |
-| ------ | ----- | ------ |
-| period | daily | weekly |
+| 参数名称 | 日榜  | 周榜   |
+| -------- | ----- | ------ |
+| period   | daily | weekly |
 
 ::: tip
 今日热门没有周榜，酷图榜日榜的参数会变成周榜，周榜的参数会变成月榜。
@@ -1305,9 +1466,9 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 <Route author="xyqfer hoilc" example="/dgtle/trade/111" path="/dgtle/trade/:typeId?" :paramsDesc="['分类 id，默认为全部']">
 
-| 全部 | 电脑  | 手机  | 平板  | 相机  | 影音  | 外设  | 生活  | 公告  |
-| -- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0  | 111 | 109 | 110 | 113 | 114 | 115 | 112 | 116 |
+| 全部 | 电脑 | 手机 | 平板 | 相机 | 影音 | 外设 | 生活 | 公告 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 0    | 111  | 109  | 110  | 113  | 114  | 115  | 112  | 116  |
 
 </Route>
 
@@ -1320,8 +1481,8 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 <Route author="Erriy" example="/dgtle/whale/category/0" path="/dgtle/whale/category/:category" :paramsDesc="['分类 id']">
 
 | 精选 | 人物 | 静物 | 二次元 | 黑白 | 自然 | 美食 | 电影与游戏 | 科技与艺术 | 城市与建筑 | 萌物 | 美女 |
-| -- | -- | -- | --- | -- | -- | -- | ----- | ----- | ----- | -- | -- |
-| 0  | 1  | 2  | 3   | 4  | 5  | 6  | 7     | 8     | 9     | 10 | 11 |
+| ---- | ---- | ---- | ------ | ---- | ---- | ---- | ---------- | ---------- | ---------- | ---- | ---- |
+| 0    | 1    | 2    | 3      | 4    | 5    | 6    | 7          | 8          | 9          | 10   | 11   |
 
 </Route>
 
@@ -1331,15 +1492,15 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 type
 
-| 下载排行榜    | 点赞排行榜 |
-| -------- | ----- |
-| download | like  |
+| 下载排行榜 | 点赞排行榜 |
+| ---------- | ---------- |
+| download   | like       |
 
 rule
 
-| 日排行 | 周排行  | 月排行   | 总排行    |
-| --- | ---- | ----- | ------ |
-| day | week | month | amount |
+| 日排行 | 周排行 | 月排行 | 总排行 |
+| ------ | ------ | ------ | ------ |
+| day    | week   | month  | amount |
 
 </Route>
 
@@ -1368,25 +1529,26 @@ rule
 
 对于微博内容，在 `routeParams` 参数中以 query string 格式指定选项，可以控制输出的样式
 
-| 键                          | 含义                                        | 接受的值           | 默认值                             |
-| -------------------------- | ----------------------------------------- | -------------- | ------------------------------- |
-| readable                   | 是否开启细节排版可读性优化                             | 0/1/true/false | false                           |
-| authorNameBold             | 是否加粗作者名字                                  | 0/1/true/false | false                           |
-| showAuthorInTitle          | 是否在标题处显示作者                                | 0/1/true/false | false（`/weibo/keyword/`中为 true） |
-| showAuthorInDesc           | 是否在正文处显示作者                                | 0/1/true/false | false（`/weibo/keyword/`中为 true） |
-| showAuthorAvatarInDesc     | 是否在正文处显示作者头像（若阅读器会提取正文图片，不建议开启）           | 0/1/true/false | false                           |
-| showEmojiForRetweet        | 显示 “🔁” 取代 “转发” 两个字                       | 0/1/true/false | false                           |
-| showRetweetTextInTitle     | 在标题出显示转发评论（置为 false 则在标题只显示被转发微博）         | 0/1/true/false | true                            |
-| addLinkForPics             | 为图片添加可点击的链接                               | 0/1/true/false | false                           |
-| showTimestampInDescription | 在正文处显示被转发微博的时间戳                           | 0/1/true/false | false                           |
-| widthOfPics                | 微博配图宽（生效取决于阅读器）                           | 不指定 / 数字       | 不指定                             |
-| heightOfPics               | 微博配图高（生效取决于阅读器）                           | 不指定 / 数字       | 不指定                             |
-| sizeOfAuthorAvatar         | 作者头像大小                                    | 数字             | 48                              |
-| displayVideo               | 是否直接显示微博视频和 Live Photo，只在博主或个人时间线 RSS 中有效 | 0/1/true/false | true                            |
-| displayArticle             | 是否直接显示微博文章，只在博主或个人时间线 RSS 中有效             | 0/1/true/false | false                           |
-| displayComments            | 是否直接显示热门评论，只在博主或个人时间线 RSS 中有效             | 0/1/true/false | false                           |
-| showEmojiInDescription     | 是否展示正文中的微博表情，关闭则替换为 `[表情名]`               | 0/1/true/false | true                            |
-| showLinkIconInDescription  | 是否展示正文中的链接图标                              | 0/1/true/false | true                            |
+| 键                         | 含义                                                               | 接受的值       | 默认值                              |
+| -------------------------- | ------------------------------------------------------------------ | -------------- | ----------------------------------- |
+| readable                   | 是否开启细节排版可读性优化                                         | 0/1/true/false | false                               |
+| authorNameBold             | 是否加粗作者名字                                                   | 0/1/true/false | false                               |
+| showAuthorInTitle          | 是否在标题处显示作者                                               | 0/1/true/false | false（`/weibo/keyword/`中为 true） |
+| showAuthorInDesc           | 是否在正文处显示作者                                               | 0/1/true/false | false（`/weibo/keyword/`中为 true） |
+| showAuthorAvatarInDesc     | 是否在正文处显示作者头像（若阅读器会提取正文图片，不建议开启）     | 0/1/true/false | false                               |
+| showEmojiForRetweet        | 显示 “🔁” 取代 “转发” 两个字                                       | 0/1/true/false | false                               |
+| showRetweetTextInTitle     | 在标题出显示转发评论（置为 false 则在标题只显示被转发微博）        | 0/1/true/false | true                                |
+| addLinkForPics             | 为图片添加可点击的链接                                             | 0/1/true/false | false                               |
+| showTimestampInDescription | 在正文处显示被转发微博的时间戳                                     | 0/1/true/false | false                               |
+| widthOfPics                | 微博配图宽（生效取决于阅读器）                                     | 不指定 / 数字  | 不指定                              |
+| heightOfPics               | 微博配图高（生效取决于阅读器）                                     | 不指定 / 数字  | 不指定                              |
+| sizeOfAuthorAvatar         | 作者头像大小                                                       | 数字           | 48                                  |
+| displayVideo               | 是否直接显示微博视频和 Live Photo，只在博主或个人时间线 RSS 中有效 | 0/1/true/false | true                                |
+| displayArticle             | 是否直接显示微博文章，只在博主或个人时间线 RSS 中有效              | 0/1/true/false | false                               |
+| displayComments            | 是否直接显示热门评论，只在博主或个人时间线 RSS 中有效              | 0/1/true/false | false                               |
+| showEmojiInDescription     | 是否展示正文中的微博表情，关闭则替换为 `[表情名]`                  | 0/1/true/false | true                                |
+| showLinkIconInDescription  | 是否展示正文中的链接图标                                           | 0/1/true/false | true                                |
+| preferMobileLink           | 是否使用移动版链接（默认使用 PC 版）                               | 0/1/true/false | false                               |
 
 指定更多与默认值不同的参数选项可以改善 RSS 的可读性，如
 
@@ -1406,7 +1568,7 @@ rule
 
 ### 关键词
 
-<Route author="DIYgod" example="/weibo/keyword/DIYgod" path="/weibo/keyword/:keyword/:routeParams?" :paramsDesc="['你想订阅的微博关键词', '额外参数；请参阅上面的说明和表格']" anticrawler="1" radar="1" rssbud="1"/>
+<Route author="DIYgod Rongronggg9" example="/weibo/keyword/DIYgod" path="/weibo/keyword/:keyword/:routeParams?" :paramsDesc="['你想订阅的微博关键词', '额外参数；请参阅上面的说明和表格']" anticrawler="1" radar="1" rssbud="1"/>
 
 ### 热搜榜
 
@@ -1414,16 +1576,16 @@ rule
 
 ### 超话
 
-<Route author="zengxs" example="/weibo/super_index/1008084989d223732bf6f02f75ea30efad58a9/sort_time" path="/weibo/super_index/:id/:type?/:routeParams?" :paramsDesc="['超话ID', '类型：见下表', '额外参数；请参阅上面的说明和表格']" anticrawler="1" radar="1" rssbud="1"/>
+<Route author="zengxs Rongronggg9" example="/weibo/super_index/1008084989d223732bf6f02f75ea30efad58a9/sort_time" path="/weibo/super_index/:id/:type?/:routeParams?" :paramsDesc="['超话ID', '类型：见下表', '额外参数；请参阅上面的说明和表格']" anticrawler="1" radar="1" rssbud="1"/>
 
-| type      | 备注       |
-| --------- | -------- |
-| soul      | 精华       |
+| type      | 备注             |
+| --------- | ---------------- |
+| soul      | 精华             |
 | video     | 视频（暂不支持） |
 | album     | 相册（暂不支持） |
-| hot_sort  | 热门       |
-| sort_time | 最新帖子     |
-| feed      | 最新评论     |
+| hot_sort  | 热门             |
+| sort_time | 最新帖子         |
+| feed      | 最新评论         |
 
 ### 个人时间线
 
@@ -1434,6 +1596,22 @@ rule
 需要对应用户打开页面进行授权生成 token 才能生成内容
 
 自部署需要申请并配置微博 key，具体见部署文档
+
+:::
+
+</Route>
+
+### 自定义分组
+
+<Route author="monologconnor Rongronggg9" example="/weibo/group/4541216424989965/微博分组/:routeParams?" path="/weibo/group/:gid/:gname?/:routeParams?" :paramsDesc="['分组id, 在网页版分组地址栏末尾`?gid=`处获取', '分组显示名称; 默认为: `微博分组`', '额外参数；请参阅上面的说明和表格']" anticrawler="1" selfhost="1">
+
+::: warning 注意
+
+由于微博官方未提供自定义分组相关 api, 此方案必须使用用户`Cookie`进行抓取
+
+因微博 cookies 的过期与更新方案未经验证，部署一次 Cookie 的有效时长未知
+
+微博用户 Cookie 的配置可参照部署文档
 
 :::
 
@@ -1465,11 +1643,15 @@ rule
 
 ### 用户笔记
 
-<Route author="lotosbin" example="/xiaohongshu/user/593032945e87e77791e03696/notes" path="/xiaohongshu/user/:user_id/notes" :paramsDesc="['用户 ID']" puppeteer="1" anticrawler="1" radar="1" rssbud="1"/>
+<Route author="lotosbin" example="/xiaohongshu/user/593032945e87e77791e03696/notes" path="/xiaohongshu/user/:user_id/notes/:fulltext?" :paramsDesc="['用户 ID', '若为`fulltext`将抓取笔记全文，若为空则只抓取笔记标题']" puppeteer="1" anticrawler="1" radar="1" rssbud="1"/>
 
-### 用户专辑
+::: tip 提示
+笔记全文不支持显示视频
+:::
 
-<Route author="lotosbin" example="/xiaohongshu/user/593032945e87e77791e03696/album" path="/xiaohongshu/user/:user_id/album" :paramsDesc="['用户 ID']" puppeteer="1" anticrawler="1" radar="1" rssbud="1"/>
+### 用户收藏
+
+<Route author="lotosbin" example="/xiaohongshu/user/593032945e87e77791e03696/collect" path="/xiaohongshu/user/:user_id/collect" :paramsDesc="['用户 ID']" puppeteer="1" anticrawler="1" radar="1" rssbud="1"/>
 
 ### 专辑
 
@@ -1484,11 +1666,11 @@ rule
 
 ### 微信公众号
 
-<Route author="lessmoe" example="/newrank/wechat/chijiread" path="/newrank/wechat/:wxid" :paramsDesc="['微信号，若微信号与新榜信息不一致，以新榜为准']" anticrawler="1"/>
+<Route author="lessmoe" example="/newrank/wechat/chijiread" path="/newrank/wechat/:wxid" :paramsDesc="['微信号，若微信号与新榜信息不一致，以新榜为准']" anticrawler="1" selfhost="1"/>
 
 ### 抖音短视频
 
-<Route author="lessmoe" example="/newrank/douyin/110266463747" path="/newrank/douyin/:dyid" :paramsDesc="['抖音ID，可在新榜账号详情 URL 中找到']" anticrawler="1"/>
+<Route author="lessmoe" example="/newrank/douyin/110266463747" path="/newrank/douyin/:dyid" :paramsDesc="['抖音ID，可在新榜账号详情 URL 中找到']" anticrawler="1" selfhost="1"/>
 
 ::: warning 注意
 免费版账户抖音每天查询次数 20 次，如需增加次数可购买新榜会员或等待未来多账户支持
@@ -1512,9 +1694,9 @@ rule
 
 <Route author="whtsky Colin-XKL" example="/zhihu/posts/people/frederchen" path="/zhihu/posts/:usertype/:id" :paramsDesc="['作者 id, 可在用户主页 URL 中找到', '用户类型usertype，参考用户主页的URL。目前有两种，见下表']" anticrawler="1" radar="1" rssbud="1"/>
 
-| 普通用户   | 机构用户 |
-| ------ | ---- |
-| people | org  |
+| 普通用户 | 机构用户 |
+| -------- | -------- |
+| people   | org      |
 
 ### 专栏
 
@@ -1536,9 +1718,9 @@ rule
 
 <Route author="nczitzk" example="/zhihu/hot" path="/zhihu/hot/:category?" :paramsDesc="['分类，见下表，默认为全站']" anticrawler="1" radar="1" rssbud="1">
 
-| 全站    | 国际    | 科学      | 汽车  | 视频     | 时尚      | 时事    | 数码      | 体育    | 校园     | 影视   |
-| ----- | ----- | ------- | --- | ------ | ------- | ----- | ------- | ----- | ------ | ---- |
-| total | focus | science | car | zvideo | fashion | depth | digital | sport | school | film |
+| 全站  | 国际  | 科学    | 汽车 | 视频   | 时尚    | 时事  | 数码    | 体育  | 校园   | 影视 |
+| ----- | ----- | ------- | ---- | ------ | ------- | ----- | ------- | ----- | ------ | ---- |
+| total | focus | science | car  | zvideo | fashion | depth | digital | sport | school | film |
 
 </Route>
 
